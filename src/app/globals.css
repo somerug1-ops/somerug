@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base: #05070c;
+  --color-surface: #0a0e17;
+  --color-line: #1a2230;
+  --color-ink: #e8ecf3;
+  --color-muted: #838ea3;
+  --color-accent: #3e8fff;
+  --font-display: var(--font-michroma), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+* {
+  min-width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-base);
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-base);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-accent) 40%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  letter-spacing: 0.14em;
+  text-indent: 0.14em;
+  font-weight: 400;
+  line-height: 0.92;
+}
+
+.dropdown-grid {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dropdown-grid.open {
+  grid-template-rows: 1fr;
+}
+
+.dropdown-content {
+  overflow: hidden;
+}
