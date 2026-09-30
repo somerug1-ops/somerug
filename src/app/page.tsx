@@ -145,16 +145,7 @@ export default function Home() {
 
       <footer className="relative z-10 bg-base border-t border-line">
         <div className="mx-auto w-full max-w-[1400px]">
-          <div className="border-t border-line/60 px-6 lg:px-10 py-10 flex flex-col md:flex-row md:items-end justify-between gap-10">
-            <div>
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-muted block mb-4">
-                System
-              </span>
-              <h2 className="text-[clamp(1.5rem,3vw,2.5rem)] leading-none tracking-tight text-ink">
-                {site.name} <span className="text-muted/50">/ {site.year}</span>
-              </h2>
-            </div>
-
+          <div className="border-t border-line/60 px-6 lg:px-10 py-10 flex flex-col md:flex-row md:items-end justify-end gap-10">
             <nav aria-label="Elsewhere" className="flex flex-col gap-2 font-mono text-sm text-muted">
               <span className="uppercase tracking-[0.2em] text-muted/50 mb-2">
                 Connect
